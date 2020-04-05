@@ -4423,8 +4423,8 @@ a.btn:not([href]):not([tabindex]):hover {
       -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
       -o-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
       transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-      padding-top: 12px;
-      padding-bottom: 12px; }
+      padding-top: 5px;
+      padding-bottom: 5px; }
       .navbar.scrolling-navbar .navbar-nav > li {
         -webkit-transition-duration: 1s;
         -o-transition-duration: 1s;

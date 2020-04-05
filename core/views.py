@@ -372,6 +372,18 @@ class HomeView(ListView):
     template_name = "home.html"
 
 
+class PaymentHistoryView(ListView):
+    context_object_name = 'name'
+    template_name = 'payment_history.html'
+    queryset = Payment.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(PaymentHistoryView, self).get_context_data(**kwargs)
+        context['orders'] = Order.objects.all()
+        context['payments'] = self.queryset
+        return context
+
+
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
         try:

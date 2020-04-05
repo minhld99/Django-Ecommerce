@@ -61,17 +61,6 @@
 
                 <!-- Content -->
                 <div class="text-center white-text mx-5 wow fadeIn">
-                  <h1 class="mb-4">
-                    <strong>Nothing</strong>
-                  </h1>
-
-                  <p>
-                    <strong>Here</strong>
-                  </p>
-
-                  <p class="mb-4 d-none d-md-block">
-                    <strong>.</strong>
-                  </p>
 
                   <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
                     free tutorial
@@ -96,17 +85,6 @@
 
                 <!-- Content -->
                 <div class="text-center white-text mx-5 wow fadeIn">
-                  <h1 class="mb-4">
-                    <strong>Nothing</strong>
-                  </h1>
-
-                  <p>
-                    <strong>Here</strong>
-                  </p>
-
-                  <p class="mb-4 d-none d-md-block">
-                    <strong>.</strong>
-                  </p>
 
                   <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start
                     free tutorial
@@ -215,11 +193,14 @@
                 </h5>
 
                 <h4 class="font-weight-bold blue-text">
-                  <strong>$
+                  <strong>
                   {% if item.discount_price %}
-                  {{ item.discount_price }}
+                  <span style="font-size: 15px" class="black-text">
+                    <del>${{ item.price }}</del>
+                  </span>
+                    ${{ item.discount_price }}
                   {% else %}
-                  {{ item.price }}
+                   ${{ item.price }}
                   {% endif %}
                   </strong>
                 </h4>

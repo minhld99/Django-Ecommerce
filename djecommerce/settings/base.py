@@ -18,6 +18,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # 'allauth.socialaccount.providers.facebook',
+    # 'allauth.socialaccount.providers.github',
+    # 'allauth.socialaccount.providers.google',
+
     'crispy_forms',
     'django_countries',
 
@@ -74,8 +79,17 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 )
-SITE_ID = 1
+SITE_ID = 2
+# python manage.py shell
+# from django.contrib.sites.models import Site
+# new_site = Site.objects.create(domain='foo.com', name='foo.com')
+# print (new_site.id)
+# This site id is in your database (default = 1)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+
 
 # CRISPY FORMS
 
